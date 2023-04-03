@@ -1,0 +1,14 @@
+.header{
+  background: #5454A4FF;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  &__logo{
+    width:100px;
+    height: 100px;
+    background-image: url('../../assets/global-news-4306.svg');
+    background-size: contain;
+  }
+}
