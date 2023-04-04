@@ -21,7 +21,7 @@ export interface ApiResponse {
 export async function getNews(): Promise<Article[]> {
     try {
         const response = await axios.get<ApiResponse>(
-            `https://newsapi.org/v2/top-headlines?language=pl&pageSize=40&apiKey=${apiKey}`,
+            `https://newsapi.org/v2/top-headlines?language=en&pageSize=40&apiKey=${apiKey}`,
         );
         return response.data.articles;
     } catch (error) {
