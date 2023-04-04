@@ -16,4 +16,9 @@
     align-items: center;
     justify-content: center;
   }
+  &__article{
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid red;
+  }
 }
