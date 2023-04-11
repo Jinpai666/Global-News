@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import './Main.scss';
-import { getNews, Article } from '../../services/getNews';
+import { getNews } from '../../services/getNews';
+import { Article } from '../../types/types'
+import ArticleCard from '../Article/ArticleCard'
 
 const Main: React.FC = () => {
     const [articles, setArticles] = useState<Article[]>([]);
 
-    const handleButtonClick = async () => {
-        const response = await getNews();
-        setArticles(response);
-        console.log(articles)
-    };
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await getNews();
+            setArticles(response);
+            console.log(response)
+        };
+        fetchData();
+    }, []);
+
 
     return (
         <div className="main">
-            <button onClick={handleButtonClick}>test</button>
             <div className="main__side-menu">
                 <ul>
                     <li>polska</li>
@@ -23,11 +28,7 @@ const Main: React.FC = () => {
             </div>
             <div className="main__content">
                 {articles.map((article) => (
-                    <div  className={"main__article"} key={article.title}>
-                        <p>{article.title}</p>
-                        <p>{article.description}</p>
-                        <a target="_blank" href={article.url}>Link</a>
-                    </div>
+                 <ArticleCard article={article}/>
                 ))}
             </div>
         </div>
