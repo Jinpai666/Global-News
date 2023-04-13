@@ -27,8 +27,8 @@ const Main: React.FC = () => {
                 </ul>
             </div>
             <div className="main__content">
-                {articles.map((article) => (
-                 <ArticleCard article={article}/>
+                {articles.map((article, idx) => (
+                 <ArticleCard key={idx} article={article}/>
                 ))}
             </div>
         </div>

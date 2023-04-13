@@ -3,11 +3,13 @@ import './ArticleCard.scss'
 import {Article} from "../../types/types";
 
 
+
 interface Props {
     article: Article;
+    key: number
 }
 
-const ArticleCard: React.FC<Props> = ({article}) => {
+const ArticleCard: React.FC<Props> = ({article, key}) => {
     return (
         <div className="article" key={article.title}>
             <a className="article__link" target="_blank" href={article.url}>
@@ -15,7 +17,7 @@ const ArticleCard: React.FC<Props> = ({article}) => {
                 <div className="article__image-container">
                     <img className="article__image" src={`${article.urlToImage}`} alt="article image"/>
                 </div>
-            : <div className="article__image-placeholder"/>
+            : <img className="article__image article__image-placeholder" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="article image"/>
             }
             <p>{article.title}</p>
             {article.description && <p>{article.description}</p>}
