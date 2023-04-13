@@ -1,30 +1,23 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios from 'axios';
 import { Article } from '../types/types'
 
 const apiKey = '05e45c4cb822480891d2b84cef40502f';
 
-interface CustomAxiosRequestConfig extends AxiosRequestConfig {
-    mode?: string;
-}
 
 export interface ApiResponse {
     status: string;
     totalResults: number;
-    articles: Article[];
+    results: Article[];
 }
-
+const url = 'https://newsdata.io/api/1/news?apikey=pub_204629e2423b2aa0ce74b1c53eaf5ff1b8044&country=pl'
 export async function getNews(): Promise<Article[]> {
     try {
-        const options: CustomAxiosRequestConfig = {
-            mode: 'cors',
-        };
-
         const response = await axios.get<ApiResponse>(
-            `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`,
-            options
+            url,
         );
-
-        return response.data.articles;
+        // return response.data.articles;
+        console.log('resp',response.data.results);
+        return response.data.results
     } catch (error) {
         console.log(error);
         return [];

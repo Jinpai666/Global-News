@@ -11,10 +11,10 @@ interface Props {
 const ArticleCard: React.FC<Props> = ({article}) => {
     return (
         <div className="article">
-            <a className="article__link" target="_blank" href={article.url}>
-            {article.urlToImage ?
+            <a className="article__link" target="_blank" href={article.link}>
+            {article.image_url ?
                 <div className="article__image-container">
-                    <img className="article__image" src={`${article.urlToImage}`} alt="article image"/>
+                    <img className="article__image" src={`${article.image_url}`} alt="article image"/>
                 </div>
             : <img className="article__image article__image-placeholder" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="article image"/>
             }
