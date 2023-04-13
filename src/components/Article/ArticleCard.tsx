@@ -6,12 +6,11 @@ import {Article} from "../../types/types";
 
 interface Props {
     article: Article;
-    key: number
 }
 
-const ArticleCard: React.FC<Props> = ({article, key}) => {
+const ArticleCard: React.FC<Props> = ({article}) => {
     return (
-        <div className="article" key={key}>
+        <div className="article">
             <a className="article__link" target="_blank" href={article.url}>
             {article.urlToImage ?
                 <div className="article__image-container">
