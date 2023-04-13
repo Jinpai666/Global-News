@@ -11,7 +11,7 @@ interface Props {
 
 const ArticleCard: React.FC<Props> = ({article, key}) => {
     return (
-        <div className="article" key={article.title}>
+        <div className="article" key={key}>
             <a className="article__link" target="_blank" href={article.url}>
             {article.urlToImage ?
                 <div className="article__image-container">
@@ -19,7 +19,7 @@ const ArticleCard: React.FC<Props> = ({article, key}) => {
                 </div>
             : <img className="article__image article__image-placeholder" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="article image"/>
             }
-            <p>{article.title}</p>
+            <p className="article__title">{article.title}</p>
             {article.description && <p>{article.description}</p>}
             </a>
         </div>

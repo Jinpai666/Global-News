@@ -19,8 +19,9 @@
     object-fit: contain;
     background-color: rgb(208,208,208);
   }
-
-
+  &__title{
+    font-weight: bold;
+  }
   &__image-container{
     display: flex;
     width: 100%;
