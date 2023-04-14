@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { Article } from '../types/types'
 
-const apiKey = '05e45c4cb822480891d2b84cef40502f';
 
 
 export interface ApiResponse {
@@ -15,7 +14,6 @@ export async function getNews(): Promise<Article[]> {
         const response = await axios.get<ApiResponse>(
             url,
         );
-        // return response.data.articles;
         console.log('resp',response.data.results);
         return response.data.results
     } catch (error) {
