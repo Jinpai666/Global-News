@@ -9,9 +9,10 @@ interface Props {
 
 const ArticleListItem: React.FC<Props> = ({article}) => {
     return (
-        <div className="article__list">
-
-            <a href={article.link}>link</a>
+        <div className="list">
+            <h2 className="list__title">{article.title}</h2>
+            <p>{article.description}</p>
+            <a href={article.link}>Link</a>
         </div>
     );
 }

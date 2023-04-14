@@ -1,6 +1,8 @@
-.article {
-  &__list {
-    display: flex;
-    flex-direction: column;
+.list {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+  &__title{
+    font-weight: bold;
   }
 }

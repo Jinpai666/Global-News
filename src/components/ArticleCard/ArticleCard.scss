@@ -1,5 +1,5 @@
-.article{
-  &__card {
+.card{
+
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
@@ -8,7 +8,7 @@
     font-size: 16px;
     width: 340px;;
     height: 420px;
-  }
+
     &__link{
       text-decoration: none;
       color: #000;
