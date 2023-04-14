@@ -17,12 +17,18 @@
     width: 20%
   }
   &__content{
-    flex:1;
     display: flex;
+    &_tiles{
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+    &_list{
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    }
   }
+
   &__article{
     width: 500px;
     margin: 0 auto;

@@ -9,7 +9,7 @@ interface HandleSortClickAction extends PayloadAction {
 }
 
 export const sortSlice = createSlice({
-    name: "sort",
+    name: "sortAsTile",
     initialState: { value: true } as SortState,
     reducers: {
         handleSortClick: (state) => {

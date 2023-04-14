@@ -9,7 +9,7 @@ import sortReducer from './features/sort'
 
 const store = configureStore({
     reducer: {
-        sort: sortReducer,
+        sortAsTiles: sortReducer,
     }
 })
 
