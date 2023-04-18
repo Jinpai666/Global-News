@@ -8,11 +8,10 @@ export interface ApiResponse {
     totalResults: number;
     results: Article[];
 }
-const url = 'https://newsdata.io/api/1/news?apikey=pub_204629e2423b2aa0ce74b1c53eaf5ff1b8044&country=pl'
-export async function getNews(): Promise<Article[]> {
+export async function getNews(countryCode: string): Promise<Article[]> {
     try {
         const response = await axios.get<ApiResponse>(
-            url,
+            `https://newsdata.io/api/1/news?apikey=pub_204629e2423b2aa0ce74b1c53eaf5ff1b8044&country=${countryCode}`,
         );
         console.log('resp',response.data.results);
         return response.data.results

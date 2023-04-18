@@ -12,7 +12,7 @@ const Main: React.FC = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await getNews();
+            const response = await getNews('be');
             setArticles(response);
             console.log(response)
         };
