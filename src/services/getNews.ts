@@ -8,7 +8,7 @@ export interface ApiResponse {
     totalResults: number;
     results: Article[];
 }
-export async function getNews(countryCode: string): Promise<Article[]> {
+export async function getNews(countryCode?: string): Promise<Article[]> {
     try {
         const response = await axios.get<ApiResponse>(
             `https://newsdata.io/api/1/news?apikey=pub_204629e2423b2aa0ce74b1c53eaf5ff1b8044&country=${countryCode}`,
