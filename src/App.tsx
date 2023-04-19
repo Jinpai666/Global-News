@@ -1,6 +1,6 @@
 import './App.css'
 import './css reset/reset.scss'
-import Main from "./components/Main/Main";
+import NewsView from "./components/NewsView/NewsView";
 import Layout from "./components/Layout/Layout";
 import {Routes, Route, Navigate } from 'react-router-dom'
 import WelcomePage from "./components/WelcomePage/WelcomePage";
@@ -12,7 +12,7 @@ function App() {
         <Layout>
             <Routes>
                 <Route path="/" element={<WelcomePage/>}/>
-                <Route path="/:countryCode" element={<Main/>}/>
+                <Route path="/:countryCode" element={<NewsView/>}/>
             </Routes>
         </Layout>
 

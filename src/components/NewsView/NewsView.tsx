@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './Main.scss';
+import './NewsView.scss';
 import {getNews} from '../../services/getNews';
 import {Article} from '../../types/types'
 import ArticleCard from '../ArticleCard/ArticleCard'
@@ -8,7 +8,7 @@ import ArticleListItem from "../ArticleListItem/ArticleListItem";
 import {Link, useParams} from "react-router-dom";
 import SideMenu from "../SideMenu/SideMenu";
 
-const Main: React.FC = () => {
+const NewsView: React.FC = () => {
     const sortAsTiles = useSelector((state: { sortAsTiles: { value: boolean } }) => state.sortAsTiles.value);
     const [articles, setArticles] = useState<Article[]>([]);
     const {countryCode} = useParams() ;
@@ -41,4 +41,4 @@ const Main: React.FC = () => {
     );
 };
 
-export default Main;
+export default NewsView;
