@@ -3,6 +3,7 @@ import './css reset/reset.scss'
 import Main from "./components/Main/Main";
 import Layout from "./components/Layout/Layout";
 import {Routes, Route, Navigate } from 'react-router-dom'
+import WelcomePage from "./components/WelcomePage/WelcomePage";
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
     <div className="App">
         <Layout>
             <Routes>
-                <Route path="/" element={<Main/>}/>
+                <Route path="/" element={<WelcomePage/>}/>
                 <Route path="/:countryCode" element={<Main/>}/>
             </Routes>
         </Layout>

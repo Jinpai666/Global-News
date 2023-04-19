@@ -1,0 +1,18 @@
+.layout-main{
+  display: flex;
+  &__children{
+    background-color: #fff;
+    padding-bottom: 40px;
+  }
+
+}
+@media (max-width:450px) {
+  .layout-main{
+    display: block;
+    &__children{
+      background-color: #fff;
+      padding-bottom: 40px;
+    }
+
+  }
+}

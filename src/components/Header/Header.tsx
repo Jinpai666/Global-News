@@ -9,7 +9,7 @@ const Header: React.FC = () => {
 
 
     return (
-        <div className='header'>
+        <header id="header" className='header'>
             <div className='header__logo'/>
             <h1>Global News</h1>
             <div className="header__buttons">
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
                 >Sortowanie</div>
                 <div>More</div>
             </div>
-        </div>
+        </header>
     );
 }
 
