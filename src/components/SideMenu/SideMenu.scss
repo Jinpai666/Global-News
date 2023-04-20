@@ -1,3 +1,17 @@
 .side-menu{
+  margin-top: 40px;
   padding: 10px 10px 0;
+  height: 50vh;
+  border-right: 2px solid rebeccapurple;
+  &__item{
+    padding: 10px;
+    border: 2px solid rebeccapurple;
+    border-radius: 10px;
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+
+  &__link{
+    text-decoration: none;
+  }
 }

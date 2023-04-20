@@ -9,26 +9,27 @@ const SideMenu: React.FC = () => {
     return (
 
                 <ul className="side-menu">
-                    <li>
-                        <Link to="/ug">
+                    <Link className="side-menu__link"  to="/ug">
+                        <li className="side-menu__item">
                             Uganda
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/pl">
+                        </li>
+                    </Link>
+
+                    <Link className="side-menu__link"  to="/pl">
+                        <li className="side-menu__item">
                             Polska
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/jp">
+                        </li>
+                    </Link>
+                    <Link className="side-menu__link"  to="/jp">
+                        <li className="side-menu__item">
                             Japonia
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/us">
+                        </li>
+                    </Link>
+                    <Link className="side-menu__link"  to="/us">
+                        <li className="side-menu__item">
                             USA
-                        </Link>
-                    </li>
+                        </li>
+                    </Link>
                 </ul>
 
     );

@@ -1,11 +1,8 @@
-*{
+* {
   box-sizing: border-box;
 }
-#root{
-  background-color: #eee;
 
-}
-.main{
+.main {
   background-color: #fff;
   display: flex;
   margin-bottom: 20px;
@@ -13,25 +10,29 @@
   max-height: 80%;
   padding-top: 20px;
   flex-direction: column;
-  &__content{
+
+  &__content {
     display: flex;
-    &_tiles{
+
+    &_tiles {
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
       justify-content: center;
     }
-    &_list{
-    flex-direction: column;
+
+    &_list {
+      flex-direction: column;
     }
   }
 
-  &__article{
+  &__article {
     width: 500px;
     margin: 0 auto;
     border: 1px solid red;
   }
 }
+
 @media (min-width: 480px) {
   .main {
 
