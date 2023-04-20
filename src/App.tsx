@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import './css reset/reset.scss'
 import NewsView from "./components/NewsView/NewsView";
 import Layout from "./components/Layout/Layout";

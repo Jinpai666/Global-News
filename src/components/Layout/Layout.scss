@@ -1,8 +1,11 @@
 .layout-main{
   display: flex;
+  height: 100%;
   &__children{
     background-color: #fff;
     padding-bottom: 40px;
+    width: 100%;
+
   }
 
 }
