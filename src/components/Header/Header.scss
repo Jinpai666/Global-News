@@ -4,6 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  &__title{
+    font-size: 76px;
+    font-weight: bold;
+  }
   &__logo{
     width:100px;
     height: 100px;

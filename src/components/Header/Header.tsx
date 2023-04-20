@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { handleSortClick } from '../../features/sort'
 
 import './Header.scss'
@@ -10,8 +10,10 @@ const Header: React.FC = () => {
 
     return (
         <header id="header" className='header'>
-            <div className='header__logo'/>
-            <h1>Global News</h1>
+            <a href="/">
+                <div className='header__logo'/>
+            </a>
+            <h1 className='header__title'>Global News</h1>
             <div className="header__buttons">
                 <div
                     onClick={() => {
