@@ -20,9 +20,9 @@ const SideMenu: React.FC = () => {
                             Polska
                         </li>
                     </Link>
-                    <Link className="side-menu__link"  to="/jp">
+                    <Link className="side-menu__link"  to="/de">
                         <li className="side-menu__item">
-                            Japonia
+                            Niemcy
                         </li>
                     </Link>
                     <Link className="side-menu__link"  to="/us">
