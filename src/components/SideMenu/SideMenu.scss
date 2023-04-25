@@ -10,8 +10,13 @@
     max-width: 150px;
     margin-bottom: 20px;
     color: rebeccapurple;
+    display: flex;
+    align-items: center;
   }
-
+  &__flag{
+    height: 20px;
+    margin-right: 10px;
+  }
   &__link{
     text-decoration: none;
   }
