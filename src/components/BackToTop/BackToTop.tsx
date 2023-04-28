@@ -24,9 +24,9 @@ function BackToTop() {
 
 
     return (
-        <div>
+        <div className="back-to-top">
             {   backToTopButton &&
-                <div onClick={scrollUp} className="back-to-top"/>
+                <div onClick={scrollUp} className="back-to-top__button"/>
             }
 
         </div>
