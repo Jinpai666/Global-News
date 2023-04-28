@@ -1,3 +1,6 @@
+@import "src/assets/variables/colors.scss";
+
+
 .bottom-menu {
   position: fixed;
   bottom: 0;
@@ -6,7 +9,7 @@
   transform: translateY(-56px);
   &__bar {
     padding: 10px;
-    background: #5454a4;
+    background:  $accent-color;
     display: flex;
     justify-content: space-around;
     align-items: center;

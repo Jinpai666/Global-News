@@ -10,10 +10,10 @@ const Header: React.FC = () => {
 
     return (
         <header id="header" className='header'>
-            <a href="/">
-                <div className='header__logo'/>
+            <a  className="header__link" href="/">
+                <h1 className="header__logo">global<span className="header__logo_right">News</span></h1>
             </a>
-            <h1 className='header__title'>Global News</h1>
+
             <div className="header__buttons">
                 <div
                     onClick={() => {

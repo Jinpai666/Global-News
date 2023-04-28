@@ -1,3 +1,6 @@
+@import "src/assets/variables/colors.scss";
+
+
 .back-to-top {
   &__button {
     cursor: pointer;
@@ -9,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #5454a4;
+    background-color:  $accent-color;
     background-image: url('../../assets/up-arrow.svg');
     background-size: 80%;
     background-position: center;
