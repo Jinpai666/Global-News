@@ -3,18 +3,23 @@
 
 .side-menu{
   margin-top: 40px;
-  padding: 10px 10px 0;
+  padding: 10px 10px;
+  width: 200px;
   height: 50vh;
   border-right: 2px solid  $accent-color;
+  position: fixed;
+  left: 0;
+  z-index: 100;
   &__item{
     padding: 10px;
-    border: 2px solid  $accent-color;
-    border-radius: 10px;
-    max-width: 150px;
+    max-width: 100%;
     margin-bottom: 20px;
-    color:  $accent-color;
+    color:  $main-color;
     display: flex;
     align-items: center;
+    &:hover{
+      background-color: grey;
+    }
   }
   &__flag{
     height: 20px;
