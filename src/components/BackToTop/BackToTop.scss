@@ -1,5 +1,4 @@
 .back-to-top {
-  max-width: 1340px;
   &__button {
     cursor: pointer;
     position: absolute;
@@ -25,3 +24,13 @@
   }
 }
 
+@media (max-width: 501px) {
+  .back-to-top {
+    &__button {
+      right: 15px;
+      bottom: 75px;
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
