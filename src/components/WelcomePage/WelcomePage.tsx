@@ -6,9 +6,15 @@ const WelcomePage: React.FC = () => {
 
 
     return (
-        <h2 className="welcome">
-            Witaj na stronie z najświeższymi wiadomościami z całego świata. Wybierz kraj z którego chcesz przeglądać aktualności.
-        </h2>
+        <div className="welcome" >
+            <h2 className="welcome__logo">
+               global<span className="welcome__accent">News</span>
+            </h2>
+            <p className="welcome__text welcome__text_large">Źródło informacji ze świata.</p>
+            <p className="welcome__text welcome__text_small">Wybierz kraj aby zacząć.</p>
+        </div>
+
+
     );
 };
 

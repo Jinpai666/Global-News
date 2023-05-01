@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     return (
         <header id="header" className='header'>
             <a  className="header__link" href="/">
-                <h1 className="header__logo">global<span className="header__logo_right">News</span></h1>
+                <h2 className="header__logo">global<span className="header__logo_right">News</span></h2>
             </a>
 
             <div className="header__buttons">

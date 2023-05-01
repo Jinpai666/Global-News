@@ -1,12 +1,60 @@
-.welcome{
-  padding-top: 40px;
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
-  max-width: 50%;
-  margin: 0 auto;
-  @media  (max-width: 780px){
-    font-size: 22px;
+@import "src/assets/variables/colors.scss";
 
+
+.welcome {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $main-color;
+  &__logo {
+    font-size: 120px;
+    font-weight: bold;
+  }
+  &__accent{
+    color: $accent-color;
+    font-size: 1.5em;
+  }
+  &__text {
+    margin-top: 30px;
+    &_small {
+      font-size: 30px;
+    }
+
+    &_large {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+  .welcome{
+    &__logo {
+      font-size: 10vw;
+    }
+  }
+    &__text {
+      &_small {
+        font-size: 3vw;
+      }
+      &_large {
+        font-size: 4vw;
+      }
+    }
+  }
+  @media(max-width:500px){
+    .welcome{
+      &__logo {
+        font-size: 50px;
+      }
+    }
+    &__text {
+      &_small {
+        font-size: 16px;
+      }
+      &_large {
+        font-size: 20px;
+      }
+    }
   }
 }
