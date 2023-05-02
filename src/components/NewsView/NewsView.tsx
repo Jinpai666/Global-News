@@ -5,8 +5,7 @@ import {Article} from '../../types/types'
 import ArticleCard from '../ArticleCard/ArticleCard'
 import {useSelector} from "react-redux";
 import ArticleListItem from "../ArticleListItem/ArticleListItem";
-import {Link, useParams} from "react-router-dom";
-import SideMenu from "../SideMenu/SideMenu";
+import { useParams} from "react-router-dom";
 
 const NewsView: React.FC = () => {
     const sortAsTiles = useSelector((state: { sortAsTiles: { value: boolean } }) => state.sortAsTiles.value);
