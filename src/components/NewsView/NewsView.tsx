@@ -17,7 +17,7 @@ const NewsView: React.FC = () => {
 
         const fetchData = async () => {
             const response = await getNews(countryCode);
-            setArticles(response);
+            setArticles(response.results);
             console.log(response)
         };
         fetchData();
