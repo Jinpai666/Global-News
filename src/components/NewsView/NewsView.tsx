@@ -3,14 +3,16 @@ import './NewsView.scss';
 import {getNews} from '../../services/getNews';
 import {Article} from '../../types/types'
 import ArticleCard from '../ArticleCard/ArticleCard'
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import ArticleListItem from "../ArticleListItem/ArticleListItem";
 import { useParams} from "react-router-dom";
+import {countArticles} from "../../features/totalArticles";
 
 const NewsView: React.FC = () => {
     const sortAsTiles = useSelector((state: { sortAsTiles: { value: boolean } }) => state.sortAsTiles.value);
     const [articles, setArticles] = useState<Article[]>([]);
     const {countryCode} = useParams() ;
+    const dispatch = useDispatch();
 
 
     useEffect(() => {
@@ -18,7 +20,8 @@ const NewsView: React.FC = () => {
         const fetchData = async () => {
             const response = await getNews(countryCode);
             setArticles(response.results);
-            console.log(response)
+            dispatch(countArticles(response.totalResults));
+            console.log(response.totalResults)
         };
         fetchData();
     }, [countryCode]);
