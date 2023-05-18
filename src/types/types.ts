@@ -1,5 +1,4 @@
 export type Article = {
-    results:{
         author?: string;
         title: string;
         description?: string;
@@ -7,11 +6,11 @@ export type Article = {
         image_url?: string;
         publishedAt: string;
         content?: string;
-    }
 
 }
 export type ApiResponse = {
     status: string;
+    nextPage: string;
     totalResults: number;
     results: Article[];
 }
