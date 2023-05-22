@@ -15,14 +15,17 @@ const NewsView: React.FC = () => {
     const sortAsTiles = useSelector((state: { sortAsTiles: { value: boolean } }) => state.sortAsTiles.value);
     const nextArticleId = useSelector((state: { nextArticleId: { value: string } }) => state.nextArticleId.value);
 
-    console.log('sortAsTiles',sortAsTiles)
-    console.log('nextArticleId',nextArticleId)
-
     const [articles, setArticles] = useState<Article[]>([]);
     const {countryCode} = useParams() ;
     const dispatch = useDispatch();
     const loadArticles = useSelector((state: { loadArticles: { value: boolean } }) => state.loadArticles.value);
+    const [country, setCountry] = useState(countryCode)
 
+
+    useEffect(()=>{
+            setCountry(countryCode)
+            setArticles([])
+    },[countryCode])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -33,7 +36,7 @@ const NewsView: React.FC = () => {
             dispatch(setNextArticleId(response.nextPage));
         };
         fetchData();
-    }, [countryCode, loadArticles]);
+    }, [country, loadArticles]);
 
     return (
         <>
