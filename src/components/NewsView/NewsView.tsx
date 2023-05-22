@@ -5,10 +5,10 @@ import {Article} from '../../types/types'
 import ArticleCard from '../ArticleCard/ArticleCard'
 import {useDispatch, useSelector} from "react-redux";
 import ArticleListItem from "../ArticleListItem/ArticleListItem";
-import { useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {countArticles} from "../../features/totalArticles";
 import {setNextArticleId} from "../../features/nextArticle";
-import { handleLoadClick } from '../../features/load'
+import {handleLoadClick} from '../../features/load'
 
 
 const NewsView: React.FC = () => {
@@ -16,16 +16,16 @@ const NewsView: React.FC = () => {
     const nextArticleId = useSelector((state: { nextArticleId: { value: string } }) => state.nextArticleId.value);
 
     const [articles, setArticles] = useState<Article[]>([]);
-    const {countryCode} = useParams() ;
+    const {countryCode} = useParams();
     const dispatch = useDispatch();
     const loadArticles = useSelector((state: { loadArticles: { value: boolean } }) => state.loadArticles.value);
     const [country, setCountry] = useState(countryCode)
 
 
-    useEffect(()=>{
-            setCountry(countryCode)
-            setArticles([])
-    },[countryCode])
+    useEffect(() => {
+        setCountry(countryCode)
+        setArticles([])
+    }, [countryCode])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -53,11 +53,10 @@ const NewsView: React.FC = () => {
                 </div>
 
             </div>
-            <button style={{marginBottom:"60px"}} onClick={()=>{
+            {articles.length > 0 && <button className="main__load-button" onClick={() => {
                 dispatch(handleLoadClick());
-            }}>load more</button>
+            }}>Załaduj więcej</button>}
         </>
-
 
     );
 };
