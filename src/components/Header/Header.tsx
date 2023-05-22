@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from "react-redux";
+import {useDispatch} from "react-redux";
 import { handleSortClick } from '../../features/sort'
 
 import './Header.scss'
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
                         dispatch(handleSortClick());
                     }}
                 >Sortowanie</div>
-                <div>More</div>
+
             </div>
         </header>
     );

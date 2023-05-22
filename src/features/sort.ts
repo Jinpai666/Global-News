@@ -1,12 +1,9 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 interface SortState {
     value: boolean;
 }
 
-interface HandleSortClickAction extends PayloadAction {
-    payload: undefined;
-}
 
 export const sortSlice = createSlice({
     name: "sortAsTile",

@@ -5,6 +5,7 @@ import './index.scss'
 import {configureStore} from "@reduxjs/toolkit";
 import {Provider} from 'react-redux'
 import sortReducer from './features/sort'
+import loadReducer from './features/load'
 import articleCountReducer from './features/totalArticles'
 import nextArticleIdReducer from './features/nextArticle'
 import {BrowserRouter} from "react-router-dom";
@@ -15,6 +16,7 @@ const store = configureStore({
         sortAsTiles: sortReducer,
         totalArticles: articleCountReducer,
         nextArticleId: nextArticleIdReducer,
+        loadArticles: loadReducer,
     }
 })
 
