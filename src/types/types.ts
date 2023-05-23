@@ -6,6 +6,7 @@ export type Article = {
         image_url?: string;
         publishedAt: string;
         content?: string;
+        pubDate?: string;
 
 }
 export type ApiResponse = {

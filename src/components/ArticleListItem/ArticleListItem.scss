@@ -5,4 +5,11 @@
   &__title{
     font-weight: bold;
   }
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bottom-date{
+    display: flex;
+  }
 }
