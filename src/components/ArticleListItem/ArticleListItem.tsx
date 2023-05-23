@@ -3,7 +3,7 @@ import './ArticleListItem.scss'
 import {Article} from "../../types/types";
 
 
-interface Props {
+type Props = {
     article: Article;
 }
 

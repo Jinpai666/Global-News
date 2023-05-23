@@ -4,7 +4,7 @@ import {Article} from "../../types/types";
 import {useSelector} from "react-redux";
 
 
-interface Props {
+type Props = {
     article: Article;
 }
 

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface LoadState {
+type LoadState = {
     value: boolean;
 }
 

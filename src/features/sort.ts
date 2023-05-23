@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface SortState {
+type SortState = {
     value: boolean;
 }
 
