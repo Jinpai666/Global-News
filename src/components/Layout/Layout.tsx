@@ -6,7 +6,7 @@ import BottomMenu from "../TopMenu/BottomMenu";
 import { getCountries } from "../../services/getCountries";
 import { countriesInNewsApi } from "../../utils/countries";
 import { Country } from "../../types/country"
-
+import "./Layout.scss"
 
 
 type LayoutProps = {
