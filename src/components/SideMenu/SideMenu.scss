@@ -2,9 +2,11 @@
 
 
 .side-menu{
+  overflow-y: auto ;
+  overflow-x: hidden ;
   margin-top: 40px;
-  padding: 10px 10px;
-  width: 200px;
+  padding-left: 10px;
+  width: 260px;
   height: 50vh;
   border-right: 2px solid  $accent-color;
   &__item{

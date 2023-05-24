@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './NewsView.scss';
 import {getNews} from '../../services/getNews';
-import {Article} from '../../types/types'
+import {Article} from '../../types/article'
 import ArticleCard from '../ArticleCard/ArticleCard'
 import {useDispatch, useSelector} from "react-redux";
 import ArticleListItem from "../ArticleListItem/ArticleListItem";
@@ -10,17 +10,14 @@ import {countArticles} from "../../features/totalArticles";
 import {setNextArticleId} from "../../features/nextArticle";
 import {handleLoadClick} from '../../features/load'
 
-
 const NewsView: React.FC = () => {
     const sortAsTiles = useSelector((state: { sortAsTiles: { value: boolean } }) => state.sortAsTiles.value);
     const nextArticleId = useSelector((state: { nextArticleId: { value: string } }) => state.nextArticleId.value);
-
     const [articles, setArticles] = useState<Article[]>([]);
     const {countryCode} = useParams();
     const dispatch = useDispatch();
     const loadArticles = useSelector((state: { loadArticles: { value: boolean } }) => state.loadArticles.value);
     const [country, setCountry] = useState(countryCode)
-
 
     useEffect(() => {
         setCountry(countryCode)

@@ -1,12 +1,19 @@
 import axios from 'axios';
-import { ApiResponse } from '../types/types'
+import { Article } from "../types/article"
+
+ type NewsApiResponse  = {
+    status: string;
+    nextPage: string;
+    totalResults: number;
+    results: Article[];
+}
 
 
 
-export async function getNews(countryCode?: string, nextArticleId?: string): Promise<ApiResponse> {
-    const url = `https://newsdata.io/api/1/news?apikey=pub_204629e2423b2aa0ce74b1c53eaf5ff1b8044&country=${countryCode}&page=${nextArticleId}`
+export async function getNews(countryCode?: string, nextArticleId?: string): Promise<NewsApiResponse> {
+    const url = `https://newsdata.io/api/1/news?apikey=pub_204629e2423b2aa0ce74b1c53eaf5ff1b8044&country=${countryCode}&language=en,pl&page=${nextArticleId}`
     try {
-        const response = await axios.get<ApiResponse>(
+        const response = await axios.get<NewsApiResponse>(
             url
         );
         return response.data;

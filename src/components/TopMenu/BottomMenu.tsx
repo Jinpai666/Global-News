@@ -2,8 +2,11 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import './BottomMenu.scss'
 import Hamburger from 'hamburger-react'
+import { MenuProps } from "../../types/country";
 
-const BottomMenu: React.FC = () => {
+
+
+const BottomMenu: React.FC<MenuProps> = ({countries}) => {
 
     const [isOpen, setOpen] = useState(false)
     const handleOptionClick = () => {
@@ -13,48 +16,34 @@ const BottomMenu: React.FC = () => {
     return (
         <div className="bottom-menu">
             {isOpen &&
+
                 <div className="bottom-menu__selection">
-                    <Link
-                        onClick={handleOptionClick}
-                        className="bottom-menu__link"
-                        to="/de"
-                    >
-                        <img className="bottom-menu__flag"
-                             src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
-                             alt="flaga"/> Germany
-                    </Link>
+                    <ul className="bottom-menu__countries">
+                        {countries.map((country, idx) => (
+                            <li>
+                                <Link
+                                    key={idx}
+                                    onClick={handleOptionClick}
+                                    className="bottom-menu__link"
+                                    to={"/" + country.cca2}
+                                >
+                                    <img
+                                        className="bottom-menu__flag"
+                                        src={country.flags.svg}
+                                        alt="flaga"
+                                    />
+                                    <p>{country.name.common}</p>
 
-                    <Link
-                        onClick={handleOptionClick}
-                        className="bottom-menu__link"
-                        to="/pl"
-                    >
-                        <img className="bottom-menu__flag"
-                             src="https://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg"
-                             alt="flaga"/> Poland
-                    </Link>
+                                </Link>
+                            </li>
+                        ))
+                        }
+                    </ul>
 
-                    <Link
-                        onClick={handleOptionClick}
-                        className="bottom-menu__link"
-                        to="/ua"
-                    >
-                        <img className="bottom-menu__flag"
-                             src="https://cdn.webshopapp.com/shops/94414/files/52440074/flag-of-ukraine.jpg"
-                             alt="flaga"/> Ukraine
-                    </Link>
 
-                    <Link
-                        onClick={handleOptionClick}
-                        className="bottom-menu__link"
-                        to="/us"
-                    >
-                        <img className="bottom-menu__flag"
-                             src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
-                             alt="flaga"/> USA
-                    </Link>
                 </div>
             }
+
             <div className="bottom-menu__bar">
                 Wybór kraju
                 <Hamburger toggled={isOpen} toggle={setOpen}/>

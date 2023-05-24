@@ -7,6 +7,7 @@
   width: 100%;
   max-width: 1340px;
   transform: translateY(-56px);
+
   &__bar {
     padding: 10px;
     background:  $accent-color;
@@ -30,6 +31,11 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    height: 40vh;
+  }
+  &__countries {
+    height: 100%;
   }
   &__link {
     color: #fff;

@@ -4,7 +4,6 @@ import './WelcomePage.scss'
 const WelcomePage: React.FC = () => {
 
 
-
     return (
         <div className="welcome" >
             <h2 className="welcome__logo">

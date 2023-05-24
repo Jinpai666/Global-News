@@ -1,4 +1,4 @@
-export type Article = {
+export type Article =  {
         author?: string;
         title: string;
         description?: string;
@@ -7,11 +7,4 @@ export type Article = {
         publishedAt: string;
         content?: string;
         pubDate?: string;
-
-}
-export type ApiResponse = {
-    status: string;
-    nextPage: string;
-    totalResults: number;
-    results: Article[];
 }
