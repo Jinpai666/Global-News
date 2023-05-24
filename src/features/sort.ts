@@ -9,8 +9,9 @@ export const sortSlice = createSlice({
     name: "sortAsTile",
     initialState: { value: true } as SortState,
     reducers: {
-        handleSortClick: (state) => {
-            state.value = !state.value;
+        handleSortClick: (state, action) => {
+            console.log('action', action)
+            state.value = action.payload;
         },
     },
 });

@@ -16,4 +16,5 @@ https://global-news-mk.netlify.app/
 - TypeScript
 - Axios
 - Redux
+- React Icons
 

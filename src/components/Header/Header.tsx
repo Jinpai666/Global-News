@@ -1,11 +1,13 @@
 import React from 'react';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import { handleSortClick } from '../../features/sort'
-
+import { FaThList } from 'react-icons/fa';
+import { FaThLarge } from 'react-icons/fa';
 import './Header.scss'
 
 const Header: React.FC = () => {
     const dispatch = useDispatch();
+    const sortAsTiles = useSelector((state: { sortAsTiles: { value: boolean } }) => state.sortAsTiles.value);
 
 
     return (
@@ -15,11 +17,20 @@ const Header: React.FC = () => {
             </a>
 
             <div className="header__buttons">
-                <div
+
+                {sortAsTiles &&   <div
                     onClick={() => {
-                        dispatch(handleSortClick());
+                        dispatch(handleSortClick(false));
                     }}
-                >Sortowanie</div>
+                >Sortuj jako lista <FaThList />
+                </div>}
+
+                {!sortAsTiles &&    <div
+                    onClick={() => {
+                        dispatch(handleSortClick(true));
+                    }}
+                >Sortuj jako kafelki  <FaThLarge/>
+                </div>}
 
             </div>
         </header>
