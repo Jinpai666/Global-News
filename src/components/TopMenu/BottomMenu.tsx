@@ -17,11 +17,11 @@ const BottomMenu: React.FC = () => {
                     <Link
                         onClick={handleOptionClick}
                         className="bottom-menu__link"
-                        to="/ua"
+                        to="/de"
                     >
                         <img className="bottom-menu__flag"
-                             src="https://cdn.webshopapp.com/shops/94414/files/52440074/flag-of-ukraine.jpg"
-                             alt="flaga"/> Ukraina
+                             src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
+                             alt="flaga"/> Germany
                     </Link>
 
                     <Link
@@ -31,17 +31,19 @@ const BottomMenu: React.FC = () => {
                     >
                         <img className="bottom-menu__flag"
                              src="https://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg"
-                             alt="flaga"/> Polska
+                             alt="flaga"/> Poland
                     </Link>
+
                     <Link
                         onClick={handleOptionClick}
                         className="bottom-menu__link"
-                        to="/de"
+                        to="/ua"
                     >
                         <img className="bottom-menu__flag"
-                             src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
-                             alt="flaga"/> Niemcy
+                             src="https://cdn.webshopapp.com/shops/94414/files/52440074/flag-of-ukraine.jpg"
+                             alt="flaga"/> Ukraine
                     </Link>
+
                     <Link
                         onClick={handleOptionClick}
                         className="bottom-menu__link"
@@ -55,9 +57,7 @@ const BottomMenu: React.FC = () => {
             }
             <div className="bottom-menu__bar">
                 Wybór kraju
-
                 <Hamburger toggled={isOpen} toggle={setOpen}/>
-
             </div>
         </div>
 

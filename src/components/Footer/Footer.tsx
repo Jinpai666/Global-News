@@ -13,7 +13,7 @@ const Footer :React.FC = () => {
     return (
         <footer className="footer">
             <div><CurrentTime/></div>
-            <div> Liczba artykułów {articleCount}</div>
+            <div> Article count: {articleCount}</div>
             <BackToTop/>
         </footer>
     );

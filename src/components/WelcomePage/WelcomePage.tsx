@@ -10,8 +10,8 @@ const WelcomePage: React.FC = () => {
             <h2 className="welcome__logo">
                global<span className="welcome__accent">News</span>
             </h2>
-            <p className="welcome__text welcome__text_large">Źródło informacji ze świata.</p>
-            <p className="welcome__text welcome__text_small">Wybierz kraj aby zacząć.</p>
+            <p className="welcome__text welcome__text_large">Your source for global information</p>
+            <p className="welcome__text welcome__text_small">Select a country to get started.</p>
         </div>
 
 

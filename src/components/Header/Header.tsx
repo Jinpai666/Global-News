@@ -22,14 +22,14 @@ const Header: React.FC = () => {
                     onClick={() => {
                         dispatch(handleSortClick(false));
                     }}
-                >Sortuj jako lista <FaThList />
+                >Sort as list <FaThList />
                 </div>}
 
                 {!sortAsTiles &&    <div
                     onClick={() => {
                         dispatch(handleSortClick(true));
                     }}
-                >Sortuj jako kafelki  <FaThLarge/>
+                >Sort as tiles  <FaThLarge/>
                 </div>}
 
             </div>

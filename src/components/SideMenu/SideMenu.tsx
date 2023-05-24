@@ -11,10 +11,10 @@ const SideMenu: React.FC = () => {
                 <ul className="side-menu">
                     <Link
                         className="side-menu__link"
-                        to="/ua"
+                        to="/de"
                     >
                         <li className="side-menu__item">
-                            <img className="side-menu__flag" src="https://cdn.webshopapp.com/shops/94414/files/52440074/flag-of-ukraine.jpg" alt="flaga"/> Ukraina
+                            <img className="side-menu__flag" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg" alt="flaga"/> Germany
                         </li>
                     </Link>
 
@@ -23,17 +23,19 @@ const SideMenu: React.FC = () => {
                         to="/pl"
                     >
                         <li className="side-menu__item">
-                            <img className="side-menu__flag" src="https://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg" alt="flaga"/> Polska
+                            <img className="side-menu__flag" src="https://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg" alt="flaga"/> Poland
                         </li>
                     </Link>
+
                     <Link
                         className="side-menu__link"
-                        to="/de"
+                        to="/ua"
                     >
                         <li className="side-menu__item">
-                            <img className="side-menu__flag" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg" alt="flaga"/> Niemcy
+                            <img className="side-menu__flag" src="https://cdn.webshopapp.com/shops/94414/files/52440074/flag-of-ukraine.jpg" alt="flaga"/> Ukraine
                         </li>
                     </Link>
+
                     <Link
                         className="side-menu__link"
                         to="/us"
