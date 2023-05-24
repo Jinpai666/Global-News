@@ -2,11 +2,15 @@
 
 
 .bottom-menu {
-  position: fixed;
+  flex-direction: column;
+  height: 100%;
+  display: flex;
   bottom: 0;
-  width: 100%;
-  max-width: 1340px;
-  transform: translateY(-56px);
+    justify-content: flex-end;
+   position: fixed;
+   width: 100%;
+   max-width: 1340px;
+   transform: translateY(-72px);
 
   &__bar {
     padding: 10px;
@@ -32,7 +36,9 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
     overflow: auto;
-    height: 40vh;
+    height: calc(100% - 231px);
+    padding-top: 20px;
+
   }
   &__countries {
     height: 100%;
