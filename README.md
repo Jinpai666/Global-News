@@ -2,7 +2,7 @@
 
 # Link to live app :globe_with_meridians:
 
-https://cinephilereactapp.netlify.app/main
+https://global-news-mk.netlify.app/
 
 # Technologies 	:hammer_and_wrench:
 
