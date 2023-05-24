@@ -1,10 +1,15 @@
 # Global-News
 
-# Link to live app :globe_with_meridians:
+## Link to live app :globe_with_meridians:
 
 https://global-news-mk.netlify.app/
 
-# Technologies 	:hammer_and_wrench:
+
+## To start the project run:
+ 1. npm install
+ 2. npm run
+
+## Technologies 	:hammer_and_wrench:
 
 - React
 - SCSS
