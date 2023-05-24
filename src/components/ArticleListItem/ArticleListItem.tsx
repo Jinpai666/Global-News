@@ -1,6 +1,6 @@
 import React from 'react';
 import './ArticleListItem.scss'
-import {Article} from "../../types/types";
+import {Article} from "../../types/article";
 
 
 type Props = {

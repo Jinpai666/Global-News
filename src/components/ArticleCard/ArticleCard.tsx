@@ -1,7 +1,6 @@
 import React from 'react';
 import './ArticleCard.scss'
-import {Article} from "../../types/types";
-import {useSelector} from "react-redux";
+import {Article} from "../../types/article";
 
 
 type Props = {
@@ -28,11 +27,6 @@ const ArticleCard: React.FC<Props> = ({article}) => {
                     {article.title.slice(0,150)}
                     {article.title.length > 150 && "..."}
                 </p>
-                {/*{article.description &&*/}
-                {/*    <p>*/}
-                {/*        {article.description.slice(0,150)}*/}
-                {/*        {article.description.length > 150 && "..."}*/}
-                {/*    </p>}*/}
             </a>
         </div>
     );
