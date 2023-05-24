@@ -20,9 +20,8 @@ const BottomMenu: React.FC<MenuProps> = ({countries}) => {
                 <div className="bottom-menu__selection">
                     <ul className="bottom-menu__countries">
                         {countries.map((country, idx) => (
-                            <li>
+                            <li key={idx}>
                                 <Link
-                                    key={idx}
                                     onClick={handleOptionClick}
                                     className="bottom-menu__link"
                                     to={"/" + country.cca2}
