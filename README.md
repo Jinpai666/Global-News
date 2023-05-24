@@ -1,5 +1,5 @@
 # Global-News
-
+Work in progress
 ## Link to live app :globe_with_meridians:
 
 https://global-news-mk.netlify.app/
