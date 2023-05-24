@@ -10,4 +10,5 @@ https://global-news-mk.netlify.app/
 - SCSS
 - TypeScript
 - Axios
+- Redux
 
