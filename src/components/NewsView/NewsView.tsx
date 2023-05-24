@@ -52,7 +52,7 @@ const NewsView: React.FC = () => {
             </div>
             {articles.length > 0 && <button className="main__load-button" onClick={() => {
                 dispatch(handleLoadClick());
-            }}>Załaduj więcej</button>}
+            }}>Load more</button>}
         </>
 
     );
