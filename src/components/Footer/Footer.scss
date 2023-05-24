@@ -8,4 +8,7 @@
   max-width: 1340px;
   padding:20px;
   font-family: 'Roboto Mono', monospace;
+  @media (max-width: 500px) {
+    height: 72px;
+  }
 }

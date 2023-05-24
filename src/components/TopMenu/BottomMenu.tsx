@@ -45,7 +45,7 @@ const BottomMenu: React.FC<MenuProps> = ({countries}) => {
             }
 
             <div className="bottom-menu__bar">
-                Wybór kraju
+                Country selection
                 <Hamburger toggled={isOpen} toggle={setOpen}/>
             </div>
         </div>
