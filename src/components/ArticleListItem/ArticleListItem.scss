@@ -1,9 +1,11 @@
 .list {
-    border: 1px solid #000;
+    border: 1px solid #ddd;
+  border-radius: 15px;
     margin-bottom: 20px;
     padding: 20px 40px;
   &__title{
     font-weight: bold;
+    margin-bottom: 20px;
   }
   &__bottom{
     display: flex;
@@ -11,5 +13,38 @@
   }
   &__bottom-date{
     display: flex;
+  }
+  &__link{
+    text-decoration: none;
+    color: #317773;
+  }
+}
+
+
+@media  (max-width: 980px) {
+  .list {
+    &__title {
+     height: 32px;
+    }
+  }
+}
+@media  (max-width: 620px) {
+  .list {
+    &__bottom {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+    &__title {
+      height: 48px;
+    }
+  }
+}
+@media  (max-width: 500px) {
+  .list {
+
+    &__title {
+      height: 64px;
+    }
   }
 }

@@ -14,10 +14,9 @@ const ArticleListItem: React.FC<Props> = ({article}) => {
 
     return (
         <div className="list">
-            <h2 className="list__title">{article.title}</h2>
-            <p>{article.description}</p>
+            <h2 className="list__title">{article.title.slice(0, 70)} {article.title.length > 70 && "..."}</h2>
             <div className="list__bottom">
-                <a href={article.link}>Link</a>
+                <a className="list__link" target="_blank" href={article.link}>Go to article</a>
                 <div className="list__bottom-date">
                     <div>{formattedDate}&nbsp;|&nbsp;</div>
                     <div>{formattedTime}</div>

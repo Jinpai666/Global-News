@@ -25,8 +25,8 @@ const ArticleCard: React.FC<Props> = ({article}) => {
                 </div>
 
                 <p className="card__title">
-                    {article.title}
-
+                    {article.title.slice(0,150)}
+                    {article.title.length > 150 && "..."}
                 </p>
                 {/*{article.description &&*/}
                 {/*    <p>*/}
