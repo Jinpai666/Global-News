@@ -39,6 +39,7 @@ const NewsView: React.FC = () => {
         <>
             <div className="main">
                 <div className={`${sortAsTiles ? "main__content_tiles" : "main__content_list"} main__content`}>
+                    {articles.length === 0 && <h2>No news to display</h2>}
                     {sortAsTiles
                         ? articles.map((article, idx) => (
                             <ArticleCard key={idx} article={article}/>
